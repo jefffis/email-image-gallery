@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Image Gallery in Email</title>
+
+		<style>
+		body, div, table {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		img {
+			display: block;
+			max-width: 100%;
+			margin: auto;
+			border: 0;
+			/**** style alt text ****/
+			color: #ee7873;
+			font-size: 20px;
+			text-align: center;
+		}
+		.icon {
+			display: inline;
+		}
+		.logo {
+			margin: 0;
+		}
+		.item {
+			max-width: 50%;
+		}
+		td { 
+			-webkit-text-size-adjust: none;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		#ForceOutlook2010BrowserLink span { padding:0px; }
+
+		/*** image slider ***/
+		input {
+			display: none;
+			height: 0;
+			visibility: hidden;
+		}
+		label {
+			cursor: pointer;
+		}
+		label:active {
+			opacity: .65;
+		}
+		label img {
+			display: inline;
+			max-width: 75px;
+		}
+		#slides {
+			overflow: hidden;
+		}
+		#slides .hide {
+			display: none;
+			max-height: 0;
+		}
+
+		#slide0:checked ~ #slides img {
+			display: block !important;
+			max-height: inherit !important;
+		}
+		#slide0:checked ~ #slides img + img {
+			display: none !important;
+			max-height: 0 !important;
+		}
+		#slide1:checked ~ #slides img, #slide2:checked ~ #slides img {
+			display: none !important;
+			max-height: 0 !important;
+		}
+		#slide1:checked ~ #slides img:nth-child(2) {
+			display: block !important;
+			max-height: inherit !important;
+		}
+		#slide2:checked ~ #slides img:nth-child(3) {
+			display: block !important;
+			max-height: inherit !important;
+		}
+		/*
+		*
+		* can work with as many as you want, just need to extend the CSS, and add in more related HTML (radio, images & labels)
+		*
+		*/
+		</style>
+	</head>
+	<body marginwidth="0" marginheight="0" bgcolor="#ffffff" leftmargin="0" topmargin="0" offset="0">
+
+		<!-- customize Gmail / iOS content begin -->
+		<table width="100%" cellspacing="0" cellpadding="0"><tr><td style="font-size: 0; height: 0; display:none;">
+			<!-- add in preheader text here -->
+		</td></tr></table>
+		<!-- customize Gmail / iOS content end -->
+ 
+		<!--[if (gte mso 9)|(IE)]>
+			<table width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td width="600" align="center">
+		<![endif]-->
+
+		<table style="margin:auto; max-width:600px;" id="wrapper" cellpadding="0" cellspacing="0"><tr><td>
+
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="content" align="center">
+						
+						<!-- begin gallery -->
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td>
+
+									<table width="100%" cellspacing="0" cellpadding="0"
+										<tr>
+											<td align="center">
+
+												<!--[if !mso]><!-- -->
+												<input type="radio" name="slides" id="slide0" />
+												<input type="radio" name="slides" id="slide1" />
+												<input type="radio" name="slides" id="slide2" />
+												<!--<![endif]-->
+
+												<div id="slides">
+
+													<img src="murray.jpg" alt="alt text here" />
+
+													<!-- hide every image after the first for Outlook -->
+												
+													<!--[if !mso]><!-- -->
+													<img src="murray1.jpg" alt="alt text here" class="hide" />
+												
+													<img src="murray2.png" alt="alt text here" class="hide" />
+													<!--<![endif]-->
+
+												</div>
+
+											</td>
+										</tr>
+									</table>
+
+									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+									
+									<table width="100%" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="center">
+
+												<!-- these images need to be sized properly, either natively or with height/width attrs for Outlook -->
+												
+												<label for="slide0">
+													<img src="murray-sm.jpg" />
+												</label>
+
+												&nbsp;
+
+												<label for="slide1">
+													<img src="murray1-sm.jpg" />
+												</label>
+
+												&nbsp;
+
+												<label for="slide2">
+													<img src="murray2-sm.jpg" />
+												</label>
+
+											</td>
+										</tr>
+									</table>
+
+								</td>
+							</tr>
+						</table>
+						<!--// end gallery -->
+
+					</td>
+				</tr>
+			</table>
+
+		</td></tr></table>
+
+		<!--[if (gte mso 9)|(IE)]>
+			</td></tr></table>
+		<![endif]-->
+	 
+	</body>
+</html>
