@@ -45,9 +45,11 @@
 
 		/*** image slider ***/
 		input {
-			display: none;
-			height: 0;
-			visibility: hidden;
+			display: none !important;
+			position: relative !important;
+			left: -9999px !important;
+			height: 0 !important;
+			visibility: hidden !important;
 		}
 		label {
 			cursor: pointer;
@@ -133,14 +135,14 @@
 
 												<div id="slides">
 
-													<img src="murray.jpg" alt="alt text here" />
+													<img src="https://rawgit.com/jefffis/email-image-gallery/gh-pages/murray.jpg" alt="alt text here" />
 
 													<!-- hide every image after the first for Outlook -->
 												
 													<!--[if !mso]><!-- -->
-													<img src="murray1.jpg" alt="alt text here" class="hide" />
+													<img src="https://rawgit.com/jefffis/email-image-gallery/gh-pages/murray1.jpg" alt="alt text here" class="hide" />
 												
-													<img src="murray2.png" alt="alt text here" class="hide" />
+													<img src="https://rawgit.com/jefffis/email-image-gallery/gh-pages/murray2.png" alt="alt text here" class="hide" />
 													<!--<![endif]-->
 
 												</div>
@@ -158,19 +160,19 @@
 												<!-- these images need to be sized properly, either natively or with height/width attrs for Outlook -->
 												
 												<label for="slide0">
-													<img src="murray-sm.jpg" />
+													<img src="https://rawgit.com/jefffis/email-image-gallery/gh-pages/murray-sm.jpg" />
 												</label>
 
 												&nbsp;
 
 												<label for="slide1">
-													<img src="murray1-sm.jpg" />
+													<img src="https://rawgit.com/jefffis/email-image-gallery/gh-pages/murray1-sm.jpg" />
 												</label>
 
 												&nbsp;
 
 												<label for="slide2">
-													<img src="murray2-sm.jpg" />
+													<img src="https://rawgit.com/jefffis/email-image-gallery/gh-pages/murray2-sm.jpg" />
 												</label>
 
 											</td>
